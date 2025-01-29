@@ -1,7 +1,9 @@
 'use client'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { useRouter } from 'next/navigation'
 export default function Home() {
+  const router = useRouter()
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -14,7 +16,7 @@ export default function Home() {
             Transform this template into your perfect website using the chat interface.
           </p>
           <div className="mt-12 flex gap-4 justify-center">
-            <Button size="lg" className="px-8">Primary Action</Button>
+            <Button size="lg" className="px-8" onClick={() => router.push('/demo')}>Primary Action</Button>
             <Button size="lg" variant="outline" className="px-8">Secondary</Button>
           </div>
         </div>
