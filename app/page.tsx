@@ -1,6 +1,7 @@
 'use client'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { Play } from 'lucide-react'
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
@@ -43,21 +44,33 @@ export default function Home() {
                   <Button className="hover:scale-105 transition-transform">
                     Try It Now
                   </Button>
-                  <Button variant="outline" className="hover:scale-105 transition-transform">
-                    Watch Demo
+                  <Button 
+                    variant="outline" 
+                    className="hover:scale-105 transition-transform group relative overflow-hidden"
+                  >
+                    <span className="flex items-center gap-2">
+                      <Play className="w-4 h-4" /> Preview
+                    </span>
+                    <span className="absolute inset-0 bg-primary/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                   </Button>
                 </div>
               </div>
               <div className="flex-1 relative group">
                 <div className="absolute inset-0 bg-primary/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
                 <div className="relative bg-background/50 backdrop-blur-sm rounded-2xl p-8 aspect-square flex items-center justify-center border border-primary/20 group-hover:border-primary/40 transition-all duration-500">
-                  <div className="text-7xl group-hover:scale-110 transition-transform duration-500">✨</div>
+                  <div className="relative text-7xl group-hover:scale-110 transition-transform duration-500">
+                    <div className="absolute -inset-4 bg-primary/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-500" />
+                    <div className="relative animate-bounce">
+                      🚀
+                    </div>
+                  </div>
                 </div>
               </div>
             </CardContent>
           </Card>
         </div>
       </section>
+      {/* Rest of the components remain the same */}
       {/* Features Grid Section */}
       <section className="container mx-auto px-4 py-24">
         <div className="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
@@ -74,10 +87,10 @@ export default function Home() {
           <Card className="bg-gradient-to-br from-background to-primary/5 border-none shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <CardContent className="pt-6">
               <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                Feature Two
+                Speed Boost
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Highlight another important aspect of your business or project here.
+              <p className="text-muted-foreground leading-relaxed font-medium">
+                Running around is now faster! 🏃‍♂️💨
               </p>
             </CardContent>
           </Card>
