@@ -1,9 +1,7 @@
 'use client'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { useRouter } from 'next/navigation'
 export default function Home() {
-  const router = useRouter()
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -16,15 +14,29 @@ export default function Home() {
             Transform this template into your perfect website using the chat interface.
           </p>
           <div className="mt-12 flex gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="px-8 bg-green-600 hover:bg-green-700" 
-              onClick={() => router.push('/demo')}
-            >
-              Primary Action
-            </Button>
+            <Button size="lg" className="px-8">Primary Action</Button>
             <Button size="lg" variant="outline" className="px-8">Secondary</Button>
           </div>
+        </div>
+      </section>
+      {/* New Feature Highlight Section */}
+      <section className="container mx-auto px-4 py-16 bg-primary/5">
+        <div className="max-w-[1200px] mx-auto">
+          <Card className="p-6 border-none shadow-lg">
+            <CardContent className="flex flex-col md:flex-row items-center gap-8 p-4">
+              <div className="flex-1 space-y-4">
+                <h2 className="text-3xl font-bold text-primary">New Feature</h2>
+                <p className="text-lg text-muted-foreground">
+                  Experience our latest innovation designed to make your life easier. 
+                  This new feature brings enhanced capabilities and seamless integration.
+                </p>
+                <Button className="mt-4">Try It Now</Button>
+              </div>
+              <div className="flex-1 bg-primary/10 rounded-lg p-8 aspect-square flex items-center justify-center">
+                <div className="text-6xl">✨</div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
       {/* Content Section */}
